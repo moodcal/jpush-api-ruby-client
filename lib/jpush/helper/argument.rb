@@ -12,7 +12,7 @@ module JPush
       MAX_TAG_BYTESIZE = 40
 
       def check_registration_id(registration_id)
-        ensure_argument_not_blank('registration id': registration_id)
+        ensure_argument_not_blank(registration_id: registration_id)
       end
 
       def check_mobile(mobile)
