@@ -40,7 +40,7 @@ module JPush
           alert: alert,
           sound: sound,
           badge: badge,
-          'content-available': available,
+          content_available: available,
           category: category,
           extras: extras
         }.compact
