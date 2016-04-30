@@ -76,7 +76,7 @@ module JPush
         end
 
         def build_sms_message(content, delay_time)
-          PushPayload.ensure_argument_not_blank(content: content)
+          PushPayload.ensure_argument_not_blank('content' => content)
           PushPayload.ensure_not_over_size('content', content, MAX_SMS_CONTENT_SIZE)
           delay_time = 0 if delay_time > MAX_SMS_DELAY_TIME
           {content: content, delay_time: delay_time}

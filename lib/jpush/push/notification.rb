@@ -9,7 +9,7 @@ module JPush
       MAX_IOS_NOTIFICATION_SIZE = 2000
 
       def set_alert(alert)
-        Notification.ensure_argument_not_blank(alert: alert)
+        Notification.ensure_argument_not_blank('alert' => alert)
         @alert = alert
         self
       end
@@ -40,7 +40,7 @@ module JPush
           alert: alert,
           sound: sound,
           badge: badge,
-          content_available: available,
+          'content-available' => available,
           category: category,
           extras: extras
         }.compact
